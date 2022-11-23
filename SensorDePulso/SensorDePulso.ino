@@ -26,7 +26,7 @@ PulseSensorPlayground pulseSensor;  // Se crea el objeto para el sensor de pulso
 
 
 void setup() {
-
+  
   Serial.begin(9600);  // Se inicia la comunicacion serial
   pinMode(photocellPin, INPUT); // Se define el pin de la fotocelda como entrada
 
@@ -37,6 +37,9 @@ void setup() {
   pinMode(touchInput, INPUT);
 
   delay(200);
+  if (pulseSensor.begin()) {
+      //Inicia el sensor de pulso
+  }
 
 }
 
